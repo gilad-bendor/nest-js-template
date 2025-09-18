@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 
 @Controller()
 export class AppController {
@@ -7,7 +7,12 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getHello({x: 'stub-x', b:[]});
+  }
+
+  @Post()
+  postHello(@Body() input: {x: string, y: number[]}): { a: string, b: { c: number[] } } {
+    return this.appService.getHello(input);
   }
 
   @Get('health')
