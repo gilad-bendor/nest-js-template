@@ -107,3 +107,7 @@ dist
 
 # Bun
 bun.lockb
+
+/.idea
+/.vscode
+/SETUP-NESTJS-PROJECT.sh

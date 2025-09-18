@@ -1,4 +1,4 @@
-# nest-js-template/
+# nest-js-template
 
 A modern Nest.js application built with Bun and TypeScript.
 
@@ -22,9 +22,6 @@ A modern Nest.js application built with Bun and TypeScript.
 ```bash
 # Install dependencies
 bun install
-
-# Copy environment variables
-cp .env.example .env
 ```
 
 ### Development
@@ -94,13 +91,9 @@ test/
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and configure as needed:
+Configure `.env` as needed:
 
 ```env
-PORT=3000
+PORT=10000
 NODE_ENV=development
 ```
-
-## License
-
-MIT
