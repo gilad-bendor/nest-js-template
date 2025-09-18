@@ -1,0 +1,36 @@
+{
+  "name": "nest-js-template/",
+  "version": "1.0.0",
+  "description": "A modern Nest.js application with Bun and TypeScript",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "bun run src/main.ts",
+    "start:dev": "bun --watch src/main.ts",
+    "start:debug": "bun --inspect --watch src/main.ts",
+    "start:prod": "bun run src/main.ts",
+    "start:compiled": "bun run dist/main.js",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:cov": "bun test --coverage",
+    "test:debug": "bun --inspect-brk test",
+    "test:e2e": "bun test test/",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "dev": "bun run typecheck && bun --watch src/main.ts",
+    "prebuild": "rimraf dist",
+    "postbuild": "echo 'Build completed successfully! Use start:compiled to run built version.'"
+  },
+  "keywords": ["nestjs", "bun", "typescript", "nodejs"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "eslint": "^9.35.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1"
+  }
+}
