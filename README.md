@@ -4,8 +4,8 @@ A modern Nest.js application built with Bun and TypeScript.
 
 ## Features
 
-- ⚡ **Bun Runtime** - Ultra-fast JavaScript runtime
-- 🏗️ **Nest.js Framework** - Scalable Node.js server-side applications
+- ⚡ **Bun Runtime** - Ultra-fast TypeScript runtime
+- 🏗️ **Nest.js Framework** - Scalable Bun server-side applications
 - 📘 **TypeScript** - Full type safety and modern JavaScript features
 - 🔍 **Type Checking** - Real-time TypeScript error detection
 - 🧪 **Testing Ready** - Pre-configured testing setup

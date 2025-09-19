@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import type { HelloInput, HelloOutput } from './schemas/hello.schema';
 
 @Injectable()
 export class AppService {
-  getHello(input: {x: string, y: number[]}): { a: string, b: { c: number[] } } {
-    return {a:'Hello World! x=' + input.x, b: {c: input.y}};
-  }
+    getHello(input: HelloInput): HelloOutput {
+        return { a: 'Hello World! x=' + input.x, b: { c: input.y } };
+    }
 }

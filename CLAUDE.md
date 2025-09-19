@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Nest.js application template built with Bun runtime and TypeScript. The project uses modern tooling and follows Nest.js conventions for scalable Node.js server-side applications.
+This is a Nest.js application template built with Bun runtime and TypeScript.
+The project uses modern tooling and follows Nest.js conventions for scalable Node.js server-side applications.
+This project uses Fastify as the HTTP adapter for improved performance, and Zod-based API validations.
+
+IMPORTANT: NEVER transpile TypeScript to JavaScript. This project is designed to run TypeScript directly with Bun: do not use swc or tsc to compile to JavaScript.
 
 ## Development Commands
 
@@ -41,7 +45,7 @@ The application follows standard Nest.js architecture:
 - `src/app.service.ts` - Root service
 
 ### Configuration
-- Uses Bun as the JavaScript runtime instead of Node.js
+- Uses Bun as the TypeScript runtime (instead of Node.js - which should *not* be supported: not transpiling TypeScript to Javascript)
 - TypeScript configuration in `tsconfig.json` with strict mode enabled
 - Nest CLI configuration in `nest-cli.json` with SWC builder for fast compilation
 - ESLint configuration with TypeScript support
