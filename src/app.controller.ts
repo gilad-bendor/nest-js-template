@@ -1,6 +1,9 @@
 import { AppService } from './app.service';
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import type { HelloInput, HelloOutput } from './schemas/hello.schema';
+import { zodHelloInput, zodHelloOutput } from './schemas/hello.schema';
+import { ZodValidationPipe } from './pipes/fastify-zod-validation.pipe';
+import { z } from 'zod';
 
 @Controller()
 export class AppController {
@@ -12,7 +15,7 @@ export class AppController {
     }
 
     @Post()
-    postHello(@Body() input: HelloInput): HelloOutput {
+    postHello(@Body(ZodValidationPipe(zodHelloInput)) input: HelloInput): HelloOutput {
         return this.appService.getHello(input);
     }
 

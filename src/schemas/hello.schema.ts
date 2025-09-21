@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-export const HelloInputSchema = z.object({
+export const zodHelloInput = z.object({
     x: z.string(),
     y: z.array(z.number()),
 });
 
-export const HelloOutputSchema = z.object({
+export const zodHelloOutput = z.object({
     a: z.string(),
     b: z.object({
         c: z.array(z.number()),
     }),
 });
 
-export type HelloInput = z.infer<typeof HelloInputSchema>;
-export type HelloOutput = z.infer<typeof HelloOutputSchema>;
+export type HelloInput = z.infer<typeof zodHelloInput>;
+export type HelloOutput = z.infer<typeof zodHelloOutput>;

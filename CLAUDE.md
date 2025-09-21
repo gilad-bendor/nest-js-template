@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Nest.js application template built with Bun runtime and TypeScript.
 The project uses modern tooling and follows Nest.js conventions for scalable Node.js server-side applications.
+
 This project uses Fastify as the HTTP adapter for improved performance, and Zod-based API validations.
+Naming convention for Zod schemas: for the type `T`, the Zod object is named `zodT`.
 
 IMPORTANT: NEVER transpile TypeScript to JavaScript. This project is designed to run TypeScript directly with Bun: do not use swc or tsc to compile to JavaScript.
 
