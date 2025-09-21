@@ -1,0 +1,46 @@
+{
+  "name": "nest-js-template",
+  "version": "1.0.0",
+  "description": "Modern TypeScript NestJS project with Fastify adapter",
+  "main": "src/main.ts",
+  "repository": "git@github.com:gilad-bendor/nest-js-template.git",
+  "author": "gilad-ben-dor <gilad.bendor@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "start:dev": "ts-node --watch src/main.ts",
+    "start:debug": "ts-node --inspect --watch src/main.ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.120",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-fastify": "^10.0.0",
+    "dotenv": "^16.3.0",
+    "fastify": "^4.24.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.1.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.1.3",
+    "prettier": "^3.0.0",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.4",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
